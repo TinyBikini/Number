@@ -19,17 +19,20 @@ namespace Number
                 return;
             }
             //проверка на исключение
-            else if (number == 2) Console.WriteLine("Число 2 четное и простое ");
-
+            if (number == 2)
+            {
+                Console.WriteLine("Число 2 четное и простое ");
+                return;
+            }
             // проверка на четность
-            else if (number % 2 == 0)
+            if (number % 2 == 0)
             {
                 Console.WriteLine($"Число \"{number}\" четное и составное");
+                return;
             }
 
-            else
-            {
-                for (int i = 2; i <= Math.Sqrt(number); i++)
+            
+            for (int i = 2; i <= Math.Sqrt(number); i++)
                 {
                     if (number % i == 0)
                     {
@@ -39,7 +42,7 @@ namespace Number
                 }
                 Console.WriteLine($"Число \"{number}\" нечетное и {(prime ? "простое" : "составное")}");
 
-            }
+          
         }
     }
 }
