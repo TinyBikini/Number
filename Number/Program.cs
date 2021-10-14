@@ -16,6 +16,7 @@ namespace Number
             if (!success)
             {
                 Console.WriteLine("Допускается вводить только натуральные числа");
+                return;
             }
             //проверка на исключение
             else if (number == 2) Console.WriteLine("Число 2 четное и простое ");
