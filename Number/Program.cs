@@ -37,12 +37,15 @@ namespace Number
                     if (number % i == 0)
                     {
                         prime = false;
-                        break;
+                    }
+                    else
+                    {
+                        prime = true;
                     }
                 }
                 Console.WriteLine($"Число \"{number}\" нечетное и {(prime ? "простое" : "составное")}");
 
-          
+
         }
     }
 }
