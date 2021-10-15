@@ -31,8 +31,15 @@ namespace Number
                 return;
             }
 
-            
-            for (int i = 2; i <= Math.Sqrt(number); i++)
+
+            for (int i = 2; prime = false; i++)
+            {
+                if ((number % i == 0) && (number != i))
+                {
+                    prime = false;
+                }
+            }
+                /*for (int i = 2; i <= Math.Sqrt(number); i++)
                 {
                     if (number % i == 0)
                     {
@@ -41,9 +48,10 @@ namespace Number
                     else
                     {
                         prime = true;
-                    }
-                }
-                Console.WriteLine($"Число \"{number}\" нечетное и {(prime ? "простое" : "составное")}");
+                 }*/
+
+             
+            Console.WriteLine($"Число \"{number}\" нечетное и {(prime ? "простое" : "составное")}");
 
 
         }
