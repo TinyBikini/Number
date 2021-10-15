@@ -32,24 +32,13 @@ namespace Number
             }
 
 
-            for (int i = 2; prime = false; i++)
+            for (int i = 2; (i <= Math.Sqrt(number) ) || (prime == false) ; i++)
             {
-                if ((number % i == 0) && (number != i))
+                if (number % i == 0)
                 {
                     prime = false;
                 }
             }
-                /*for (int i = 2; i <= Math.Sqrt(number); i++)
-                {
-                    if (number % i == 0)
-                    {
-                        prime = false;
-                    }
-                    else
-                    {
-                        prime = true;
-                 }*/
-
              
             Console.WriteLine($"Число \"{number}\" нечетное и {(prime ? "простое" : "составное")}");
 
