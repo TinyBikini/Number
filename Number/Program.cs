@@ -32,7 +32,7 @@ namespace Number
             }
 
 
-            for (int i = 2; (i <= Math.Sqrt(number) ) || (prime == false) ; i++)
+            for (int i = 2; i <= Math.Sqrt(number) || prime == false; i++)
             {
                 if (number % i == 0)
                 {
