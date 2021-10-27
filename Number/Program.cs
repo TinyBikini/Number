@@ -7,15 +7,15 @@ namespace Number
         static void Main(string[] args)
         {
             bool prime = true;
-            int number = 0;
+            //int number = 0;
     
             Console.WriteLine("Введите натуральное число");
             Console.WriteLine("-------------------------\n");
 
-            bool success = int.TryParse(Console.ReadLine(), out number);
+            bool success = int.TryParse(Console.ReadLine(), out int number);
             if (!success)
             {
-                Console.WriteLine("Допускается вводить только натуральные числа");
+                Console.WriteLine(number);
                 return;
             }
             //проверка на исключение
