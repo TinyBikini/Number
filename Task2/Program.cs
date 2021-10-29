@@ -2,20 +2,24 @@
 
 namespace Task2
 {
+
     public class Program
     {
       public static void Main(string[] args)
-        {
-
-            
+        {                       
             int NOD = 0;
 
-            Console.WriteLine("Определение НОД и НОК. Введите первое число");
-            Console.WriteLine("-----------------------------------------\n");
+            Console.WriteLine("Определение НОД и НОК");
+            Console.WriteLine("----------------------");
 
-            int number1 = GetNumber();
-            Console.WriteLine("Введите второе число");
-            int number2 = GetNumber();
+            //string message1 = "первое";
+            //string message2 = "второе";
+
+            if (!GetNumber("первое", out int number1) || !GetNumber("второе", out int number2))
+            {
+                return;
+            }
+
 
             //Переменные для хранения исходных чисел для расчета НОК
             int numberNok1 = number1;
@@ -42,19 +46,17 @@ namespace Task2
             Console.WriteLine($"НОК = {NOK}");
 
         }
-        static public int GetNumber()
+        public static bool GetNumber(string message, out int value)
         {
-            bool success = int.TryParse(Console.ReadLine(), out int number);
+            Console.WriteLine($"Введите {message} число");
+            string input = Console.ReadLine();
+            bool success = int.TryParse(input, out value);
             if (!success)
             {
                 Console.WriteLine("Допускается вводить только натуральные числа");
-                //как прекратить дальнейшее выполнение кода? раньше стоял return, а сейчас обязательно выдать что-нибудь
-                return 0;
             }
-            else
-            {
-                return number;
-            }
+            return success;
+
         }
     }
 
