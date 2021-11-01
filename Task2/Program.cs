@@ -12,9 +12,6 @@ namespace Task2
             Console.WriteLine("Определение НОД и НОК");
             Console.WriteLine("----------------------");
 
-            //string message1 = "первое";
-            //string message2 = "второе";
-
             if (!GetNumber("первое", out int number1) || !GetNumber("второе", out int number2))
             {
                 return;
